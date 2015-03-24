@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html ng-app="DroneFabio">
+<head>
+  <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>DroneFabio</title>
+
+  <link type="text/css" href="/styles/screen.css" media="screen" rel="stylesheet" />
+  
+  <!-- Bootstrap Core CSS -->
+  <link href="/scripts/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">  
+
+  
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+        <li class="active">
+
+          
+        </li>               
+      </div>
+    </nav>  
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <table class="table">
+            <tr>        
+              <td class="tdTitle">Altitude</td>
+              <td id="altitudeVal"></td>
+            </tr>
+            <tr>         
+              <td class="tdTitle">GPS # Sats</td>
+              <td id="gpsNumSatVal"></td>
+            </tr>
+            <tr>
+              <td class="tdTitle">GPS LAT/LON</td>
+              <td id="gpsLatLonVal"></td>
+            </tr>
+            <tr>
+              <td class="tdTitle">GPS Speed</td>
+              <td id="gpsSpeedVal"></td>
+            </tr>
+            <tr>
+              <td class="tdTitle">GPS Altitude</td>
+              <td id="gpsAltitudeVal"></td>
+            </tr>
+            <tr>
+              <td class="tdTitle">Signal (RSSI)</td>
+              <td id="rssiVal"></td>
+            </tr>
+          </table>          
+        </div>
+      </div>    
+
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <ul>
+            <li id="angxVal"></li>
+            <li id="angyVal">Y</li> 
+            <li id="hdgVal">Z</li>
+          </ul>      
+        </div>          
+      </div>
+
+      <div class="col-md-4">
+        
+            
+            <table class="table">
+              <tr>
+                <td class="tdTitle">Pitch</td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar" 
+                         role="progressbar" 
+                         aria-valuenow="50" 
+                         aria-valuemin="0" 
+                         aria-valuemax="100" 
+                         style="width: 50%;">
+                         <span id="pitchVal"></span>
+                    </div>
+                   </div>        
+                  </div>
+                </td>                
+              </tr>
+              <tr>
+                <td class="tdTitle">Roll</td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar" 
+                         role="progressbar" 
+                         aria-valuenow="50" 
+                         aria-valuemin="0" 
+                         aria-valuemax="100" 
+                         style="width: 50%;">
+                         <span id="rollVal"></span>
+                    </div>
+                   </div>        
+                  </div>
+                </td>              
+              </tr>
+              <tr>
+                <td class="tdTitle">Pitch</td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar" 
+                         role="progressbar" 
+                         aria-valuenow="50" 
+                         aria-valuemin="0" 
+                         aria-valuemax="100" 
+                         style="width: 50%;">
+                         <span id="pitchVal"></span>
+                    </div>
+                   </div>        
+                  </div>
+                </td>                
+              </tr>
+              <tr>
+                <td class="tdTitle">Yaw</td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar" 
+                         role="progressbar" 
+                         aria-valuenow="50" 
+                         aria-valuemin="0" 
+                         aria-valuemax="100" 
+                         style="width: 50%;">
+                         <span id="yawVal"></span>
+                    </div>
+                   </div>        
+                  </div>
+                </td>              
+              </tr>              
+            </table>
+        
+      
+  </div>  
+    
+  <br style="clear: both;" />
+  <br style="clear: both;" />
+
+  <div id="yaw">
+    YAW
+  </div>
+  
+  <div id="bar">
+    <div id="slider">
+      THROTTLE
+    </div>
+  </div>
+
+  <br style="clear: both;" />
+  <br style="clear: both;" />
+
+  <div class="aux" id="arm">
+    A1 
+    <div> 
+      ARM 
+    </div>
+  </div>
+
+  <div class="aux flRight" id="aux2">A2 <br/>
+    BARO
+  </div>
+
+  <div class="aux" id="aux3">A3<br />
+    GPS HOLD
+  </div>
+
+  <div class="aux flRight" id="aux4">A4<br />
+    GPS HOME
+  </div>
+
+  <div ng-controller="Controller">
+  <h1> alt1 {{alt1}} </h1>
+  </div>
+
+      
+
+  <!-- jQuery -->
+  <script src="/scripts/lib/jquery-1.8.2.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="/scripts/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/scripts/lib/main.js"></script>
+  <script src="/socket.io/socket.io.js"></script>    
+
+   
+  <!-- AngularJs -->
+  <script src="/scripts/lib/Angularjs/angular.min.js"></script>
+</body>
+</html> 
